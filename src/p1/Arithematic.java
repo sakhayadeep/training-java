@@ -3,6 +3,7 @@ package p1;
 public class Arithematic {
 	int num1, num2, result;
 	String op = "";
+	static int result1 = 100;
 	
 	public void setData(int num1, int num2) {
 		this.num1 = num1;
