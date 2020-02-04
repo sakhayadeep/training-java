@@ -10,7 +10,12 @@ public class Algebra {
 		return a+b;
 	}
 
-	public String add(int a, int b,Boolean ...c) {
+//	public String add(int a, int b,Boolean ...c) {
+//		return String.valueOf(a)+String.valueOf(b);
+//		
+//	}
+	public String add(int a, int b,Boolean c) {
+		c = c == null?true:c;
 		return String.valueOf(a)+String.valueOf(b);
 		
 	}
