@@ -2,7 +2,7 @@ package p3;
 
 import java.util.*;
 
-public class StudentBean {
+public class StudentBean implements Comparable<StudentBean> {
 	private String name;
 	private String city;
 	private Date dob;
@@ -55,6 +55,13 @@ public class StudentBean {
 	@Override
 	public String toString() {
 		return "StudentBean [name=" + name + ", city=" + city + ", dob=" + dob + "]";
+	}
+
+	@Override
+	public int compareTo(StudentBean o) {
+		
+		return this.name.compareTo(o.name);  //increasing
+//		return o.name.compareTo(this.name);  //decreasing
 	}
 	
 }
