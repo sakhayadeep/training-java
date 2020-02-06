@@ -1,7 +1,5 @@
 package p4;
 
-import java.util.function.Function;
-
 public class Day4Demo7 {
 
 	public static void main(String[] args) {
@@ -13,18 +11,12 @@ public class Day4Demo7 {
 		f1(10, 20, ob1);
 		
 		f1(10, 20, (a,b)->a/b);
+			
 	}
 	
 	public static void f1(int a, int b, Calculate ob) {
 		System.out.println(ob.cal(a, b));
 	}
-	
-//	public static void f2(Function<void, void> a) {
-//		System.out.println("1");
-//	}
-//	public static void f3() {
-//		System.out.println("1");
-//	}
 	
 
 }
