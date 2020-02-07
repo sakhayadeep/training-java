@@ -1,0 +1,127 @@
+Microsoft Windows [Version 10.0.18362.592]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\workspace-sakhayadeep>set classpath=C:\workspace-sakhayadeep
+
+C:\workspace-sakhayadeep>dir
+ Volume in drive C is OSDisk
+ Volume Serial Number is 2E92-35F6
+
+ Directory of C:\workspace-sakhayadeep
+
+02/07/2020  12:38 PM    <DIR>          .
+02/07/2020  12:38 PM    <DIR>          ..
+02/03/2020  09:55 AM    <DIR>          .metadata
+02/07/2020  12:38 PM               695 Day5Demo7.java
+02/07/2020  08:46 AM    <DIR>          firstProject
+               1 File(s)            695 bytes
+               4 Dir(s)  177,756,819,456 bytes free
+
+C:\workspace-sakhayadeep>javac Day5Demo7.java
+
+C:\workspace-sakhayadeep>java Day5Demo7
+Error: A JNI error has occurred, please check your installation and try again
+Exception in thread "main" java.lang.UnsupportedClassVersionError: Day5Demo7 has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(Unknown Source)
+        at java.security.SecureClassLoader.defineClass(Unknown Source)
+        at java.net.URLClassLoader.defineClass(Unknown Source)
+        at java.net.URLClassLoader.access$100(Unknown Source)
+        at java.net.URLClassLoader$1.run(Unknown Source)
+        at java.net.URLClassLoader$1.run(Unknown Source)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(Unknown Source)
+        at java.lang.ClassLoader.loadClass(Unknown Source)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+        at java.lang.ClassLoader.loadClass(Unknown Source)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(Unknown Source)
+
+C:\workspace-sakhayadeep>java -v
+Unrecognized option: -v
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+
+C:\workspace-sakhayadeep>java -V
+Unrecognized option: -V
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+
+C:\workspace-sakhayadeep>java -version
+java version "1.8.0_201"
+Java(TM) SE Runtime Environment (build 1.8.0_201-b09)
+Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
+
+C:\workspace-sakhayadeep>set path=C:\Program Files\Java\jdk-11\bin
+
+C:\workspace-sakhayadeep>java Day5Demo7.java
+error: class found on application class path: Day5Demo7
+
+C:\workspace-sakhayadeep>javac Day5Demo7.java
+
+C:\workspace-sakhayadeep>java Day5Demo7
+Enter source and target file name to display:
+C:\workspace-sakhayadeep\Day5Demo7.java
+C:\workspace-sakhayadeep\temp.java
+Copied from C:\workspace-sakhayadeep\Day5Demo7.java to C:\workspace-sakhayadeep\temp.java
+
+C:\workspace-sakhayadeep>dir
+ Volume in drive C is OSDisk
+ Volume Serial Number is 2E92-35F6
+
+ Directory of C:\workspace-sakhayadeep
+
+02/07/2020  12:43 PM    <DIR>          .
+02/07/2020  12:43 PM    <DIR>          ..
+02/03/2020  09:55 AM    <DIR>          .metadata
+02/07/2020  12:42 PM             1,576 Day5Demo7.class
+02/07/2020  12:38 PM               695 Day5Demo7.java
+02/07/2020  08:46 AM    <DIR>          firstProject
+02/07/2020  12:43 PM               695 temp.java
+               3 File(s)          2,966 bytes
+               4 Dir(s)  178,015,293,440 bytes free
+
+C:\workspace-sakhayadeep>java Day5Demo7
+Enter source and target file name to display:
+C:\workspace-sakhayadeep\Day5Demo7.java
+con
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Day5Demo7 {
+
+        public static void main(String[] args) throws Exception{
+                System.out.println("Enter source and target file name to display:");
+
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+                String x = br.readLine();
+                String z = br.readLine();
+
+                FileInputStream f1 = new FileInputStream(x);
+                FileOutputStream f2 = new FileOutputStream(z);
+
+                int y;
+                while((y = f1.read()) != -1) {
+                        f2.write(y);
+                }
+                f1.close();
+                f2.close();
+                System.out.println("Copied from "+x+" to "+z);
+        }
+
+}
+Copied from C:\workspace-sakhayadeep\Day5Demo7.java to con
+
+C:\workspace-sakhayadeep>java Day5Demo7
+Enter source and target file name to display:
+C:\workspace-sakhayadeep\Day5Demo7.java
+prn
+Exception in thread "main" java.io.FileNotFoundException: prn (The system cannot find the file specified)
+        at java.base/java.io.FileOutputStream.open0(Native Method)
+        at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+        at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+        at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:126)
+        at Day5Demo7.main(Day5Demo7.java:16)
+
+C:\workspace-sakhayadeep>
